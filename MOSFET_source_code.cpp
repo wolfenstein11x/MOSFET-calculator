@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MOSFET.h"
 
-void NMOS::get_voltages()
+void Transistor::get_voltages()
 {
 	std::cout << "Enter the drain voltage: ";
 	std::cin >> VD;
@@ -41,16 +41,6 @@ int NMOS::sat_triode_cutoff()
 	else {
 		return 2;
 	}
-}
-
-void PMOS::get_voltages()
-{
-	std::cout << "Enter the drain voltage: ";
-	std::cin >> VD;
-	std::cout << "Enter the gate voltage: ";
-	std::cin >> VG;
-	std::cout << "Enter the source voltage: ";
-	std::cin >> VS;
 }
 
 double PMOS::calc_current_sat(double &current)
